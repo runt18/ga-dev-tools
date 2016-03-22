@@ -183,7 +183,7 @@ class ExportPrinter(object):
     if results.get('containsSampledData'):
       sampled_text = 'do'
 
-    row_text = 'These results %s contain sampled data.' % sampled_text
+    row_text = 'These results {0!s} contain sampled data.'.format(sampled_text)
     self.writer.writerow([row_text])
 
   def OutputHeaders(self, results):
